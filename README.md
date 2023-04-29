@@ -15,17 +15,17 @@ Please follow the instructions at [DATASETS.md](DATASETS.md) to prepare all data
 
 ### Training:
 
-- LiFT over 11 datasets:
+- Run LiFT on 11 datasets:
     ```bash
     sh train.sh
     ```
 
-- LiFT-Adapter over 11 datasets:
+- Run LiFT-Adapter on 11 datasets:
     ```bash
     sh train_liftadapter.sh
     ```
 
-- LiFT-NCD over 11 datasets:
+- Run LiFT-NCD on 11 datasets:
 
     ```bash
     sh train_liftncd.sh
