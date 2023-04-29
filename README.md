@@ -11,7 +11,7 @@ This is a PyTorch implementation of ["LiFT: Transfer Learning in Vision-Language
 * dassl
 
 ### Data preparation
-Please follow the instructions at [DATASETS.md](DATASETS.md) to prepare all datasets.
+Data preparation is borrowed from a baseline CoOp. Please follow the instructions at [DATASETS.md](DATASETS.md) to prepare all datasets.
 
 ### Training:
 
