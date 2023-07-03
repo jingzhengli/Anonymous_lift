@@ -232,7 +232,7 @@ def main(args):
         warmup_epochs=args.warmup_epochs, warmup_steps=args.warmup_steps,
     )
     thresholding_module = DynamicThresholdingModule(train_config['conf_threshold'], args.warmup, lambda x: x / (2 - x), len(dataset_new.classnames),
-                                                    len(dataset_new.test), device=device)
+                                                    len(dataset_new.train_x), device=device)
 
     if args.eval:
         test_stats = evaluate_ncd(data_loader_val_base,data_loader_val_new, model, device, model_ema=model_ema, args=args)
