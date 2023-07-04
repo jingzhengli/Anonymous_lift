@@ -4,7 +4,7 @@
 This is a PyTorch implementation of ["LiFT: Transfer Learning in Vision-Language Models for Downstream Adaptation and Generalization"]. 
 
 ### Requirements
-* pytorch 1.10.0
+* pytorch 1.12.1
 * timm 0.4.12
 * tensorboardX
 * ftfy
