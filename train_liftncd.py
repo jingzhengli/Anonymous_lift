@@ -114,7 +114,7 @@ def get_args():
     parser.add_argument('--warmup', default=False, type=bool)
     parser.add_argument('--eval', action='store_true',
                         help='Perform evaluation only')
-    parser.set_defaults(eval=True)
+    # parser.set_defaults(eval=True)
     parser.add_argument('--num_workers', default=10, type=int)
 
     # distributed training parameters
@@ -154,7 +154,7 @@ def main(args):
     cudnn.benchmark = True
     # create image classifier from pretrained clip model
     dataset_base = build_dataset(args.dataset,args.root_path,args.shots,"base") # cfg['dataset'], cfg['root_path'], cfg['shots'])
-    dataset_new = build_dataset(args.dataset,args.root_path,-1,"new")
+    dataset_new = build_dataset(args.dataset,args.root_path,16,"new")
     args.classnames = dataset_base.classnames
     args.classnames_new = dataset_new.classnames
     model = clip_classifier(args)
