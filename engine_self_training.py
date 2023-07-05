@@ -148,7 +148,7 @@ def train_one_epoch_liftncd(model: torch.nn.Module, args, train_config,
         with torch.no_grad():             
             # pseudo-label with ema model
             _,probs_ema_new,_ = model_ema.ema(images_weak_u, ncd=True)
-            logits_base,logits_new,_ = model(images_weak_u, ncd=True)
+            # logits_base,logits_new,_ = model(images_weak_u, ncd=True)
             probs_ema = F.softmax(probs_ema_new,dim=-1)
             score, pseudo_targets = probs_ema.max(-1)
 
